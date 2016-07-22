@@ -2,7 +2,7 @@
 
 *A mostly reasonable approach to Twig*
 
-This is an extension of the [Official SensioLabs Twig Standards](http://twig.sensiolabs.org/doc/coding_standards.html).
+This is a superset of the [Official SensioLabs Twig Standards](http://twig.sensiolabs.org/doc/coding_standards.html).
 Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascript).
 
 ## Table of Contents
@@ -118,19 +118,25 @@ Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascr
 
     ```twig
     {# Bad. #}
-    set foo [
+    {%
+    set foo = [
     ∙∙∙∙name
     ]
+    %}
 
     {# Bad. #}
-    set foo [
+    {%
+    set foo = [
     ∙name
     ]
+    %}
 
     {# Good. #}
-    set baz [
+    {%
+    set baz = [
     ∙∙name;
     ]
+    %}
     ```
 
   <a name="whitespace--before-blocks"></a><a name="9.2"></a>
@@ -395,7 +401,7 @@ Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascr
     > Why? This leads to cleaner git diffs.
 
     ```twig
-    {# Bad. #} git diff.
+    {# Bad. Git diff. #}
     {%
     set hero = {
          'firstName': 'Florence',
@@ -405,7 +411,7 @@ Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascr
     }
     %}
 
-    {# Good. #} git diff.
+    {# Good. Git diff. #}
     {%
     set hero = {
          'firstName': 'Florence',
@@ -413,7 +419,9 @@ Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascr
     +    'inventorOf': ['coxcomb chart', 'modern nursing'],
     }
     %}
+    ```
 
+    ```twig
     {# Bad. #}
     {%
     set hero = {
