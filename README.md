@@ -3,6 +3,9 @@
 *A mostly reasonable approach to Twig*
 
 This is a superset of the [Official SensioLabs Twig Standards](http://twig.sensiolabs.org/doc/coding_standards.html).
+
+It should be compatible with the [Drupal Twig Coding Standards](https://www.drupal.org/node/1823416).
+
 Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascript).
 
 ## Table of Contents
