@@ -32,6 +32,18 @@ Very heavily 'inspired' by [airbnb/Javascript](https://github.com/airbnb/javascr
 
 ## Filters
 
+<a name="replace-string-tokens"><a name="2.1"></a>
+  - [2.1]() String tokens to be used inside the `replace` filter should be
+    marked with percentage signs.
+
+    ```twig
+    {# Bad. #}
+    {{ sidekicks|replace('{{ robin }}', 'Dick Grayson') }}
+
+    {# Good. #}
+    {{ sidekicks|replace('%robin%', 'Jason Todd') }}
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Functions
